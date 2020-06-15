@@ -22,8 +22,14 @@ about various `Song`s. Our data model looks like this:
   - has a `name` attribute (`String`)
   - has many `songs`
 - `Note`
+
   - has `content` attribute (`String`)
   - belongs to a `Song`
+
+         <Note>--
+                |
+
+    Artist---<Song>----<Genre>
 
 ## Instructions
 
@@ -35,17 +41,17 @@ about various `Song`s. Our data model looks like this:
    The `ArtistsController` and `SongsController` have been built out so that you
    can do this.
 
-First, connect the models by using the `ActiveRecord` association commands.
+First, connect the models by using the `ActiveRecord` association commands. [X]
 
 Next, update the minimal `app/views/songs/new.html.erb`.
 
 This view should have a form that provides:
 
-- A text input box that sets the `Song`'s title.
-- A text input box for the `Artist`.
-- A selection box for `Genre`. Users should be able to pick amongst existing genres only.
+- A text input box that sets the `Song`'s title. [X]
+- A text input box for the `Artist`. [X]
+- A selection box for `Genre`. Users should be able to pick amongst existing genres only. [X]
 - Several text input boxes to add notes to the song. These should have the IDs
-  `song_notes_1`, `song_notes_2`, and so on for the specs to pass.
+  `song_notes_1`, `song_notes_2`, and so on for the specs to pass. [X]
 
 This is a challenging lab. Here are some hints:
 
@@ -60,9 +66,8 @@ This is a challenging lab. Here are some hints:
 
 ## References
 
-* [`has_many` association reference](https://guides.rubyonrails.org/association_basics.html#has-many-association-reference)
-* [`belongs_to` association reference](https://guides.rubyonrails.org/association_basics.html#belongs-to-association-reference)
-* [Specifying which parameters are accepted in Rails Controllers](https://apidock.com/rails/ActionController/Parameters/permit)
+- [`has_many` association reference](https://guides.rubyonrails.org/association_basics.html#has-many-association-reference)
+- [`belongs_to` association reference](https://guides.rubyonrails.org/association_basics.html#belongs-to-association-reference)
+- [Specifying which parameters are accepted in Rails Controllers](https://apidock.com/rails/ActionController/Parameters/permit)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/forms-and-basic-associations-rails-lab' title='Forms And Basic Associations Rails Lab'>Forms And Basic Associations Rails Lab</a> on Learn.co and start learning to code for free.</p>
-
